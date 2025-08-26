@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReportMonthlyDurationFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="30sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monthly Duration Report"/>
+
+    <com.db.williamchart.view.BarChartView
+        android:id="@+id/barChartReport"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:chart_axis="x"
+        app:chart_barsColor="@color/primary"
+        app:chart_barsRadius="1dp"
+        app:chart_labelsColor="@color/colorGrey"
+        app:chart_labelsSize="10sp"
+        app:chart_spacing="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntryFragment"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Workout Entry"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerWorkoutType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/primary"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/colorGrey"/>
+
+        <TextView
+            android:id="@+id/txtWorkoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"
+            android:text="Please Set Workout Date..."
+            android:textColor="@color/primary"
+            android:textSize="21sp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/txtWorkoutTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:padding="10dp"
+            android:text="Please Set Workout Time..."
+            android:textColor="@color/primary"
+            android:textSize="21sp"
+            android:layout_marginBottom="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/rdoGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/rdoIndoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Indoor"
+                android:background="@drawable/edit_text_background"
+                android:textColor="@color/primary"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rdoOutdoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outdoor"
+                android:background="@drawable/edit_text_background"
+                android:textColor="@color/primary"
+                android:textSize="18sp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipments:"
+            android:textSize="21sp"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <CheckBox
+                android:id="@+id/checkDumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dumbbell"
+
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/checkBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Barbell"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/checkRope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rope"
+                android:textColor="@color/primary"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editDistance"
+            android:hint="Distance (km)"
+            android:background="@drawable/edit_text_background"
+            android:textColorHint="@color/primary"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/editDuration"
+            android:hint="Duration (minutes)"
+            android:background="@drawable/edit_text_background"
+            android:inputType="number"
+            android:textColorHint="@color/primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/editWeight"
+            android:background="@drawable/edit_text_background"
+            android:hint="Weight (kg)"
+            android:textColorHint="@color/primary"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/editRemark"
+            android:hint="Remark..."
+            android:inputType="textMultiLine"
+            android:background="@drawable/edit_text_background"
+            android:textColorHint="@color/primary"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnAddWorkout"
+                android:text="Add Workout"
+                android:textSize="20sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/colorGrey"
+                android:layout_marginEnd="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnClearWorkout"
+                android:text="Clear"
+                android:textSize="20sp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/colorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

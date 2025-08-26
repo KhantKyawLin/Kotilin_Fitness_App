@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileFragment"
+    android:orientation="vertical"
+    android:padding="16dp"> <!-- Added padding for comfortable spacing around content -->
+
+    <!-- User Profile Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/primary"
+        android:text="User Profile"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Full Name TextView -->
+    <TextView
+        android:id="@+id/txtFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:textColor="@color/colorGrey"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"/> <!-- Added margin below for spacing -->
+
+    <!-- User Email TextView -->
+    <TextView
+        android:id="@+id/txtUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="10dp"
+        android:textColor="@color/colorGrey"
+        android:textSize="25sp"/>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutDetailsFragment"
+    android:orientation="vertical"
+    android:padding="16dp"> <!-- Added padding for uniform spacing -->
+
+    <!-- Workout Details Title -->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/primary"
+        android:text="Workout Details"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Workout Type TextView -->
+    <TextView
+        android:id="@+id/txtWorkoutType"
+        android:padding="10dp"
+        android:textSize="21sp"
+        android:text="xxx"
+        android:gravity="center"
+        android:textColor="@color/colorGrey"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/> <!-- Added margin at bottom for spacing -->
+
+    <!-- Workout Details TextView -->
+    <TextView
+        android:id="@+id/txtWorkoutDetails"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        android:textSize="21sp"
+        android:text="yyy"
+        android:textColor="@color/colorGrey"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/> <!-- Added margin at bottom for spacing -->
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBacktoList"
+        android:layout_gravity="center"
+        android:text="Back"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/colorGrey"
+        android:backgroundTint="@color/primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/> <!-- Added margin on top for spacing -->
+
+</LinearLayout>

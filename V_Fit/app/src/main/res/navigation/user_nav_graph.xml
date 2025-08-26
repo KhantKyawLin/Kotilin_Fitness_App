@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.V_Fit.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportMonthlyDurationFragment"
+            app:destination="@id/reportMonthlyDurationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.V_Fit.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.V_Fit.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry" >
+        <argument
+            android:name="userID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_entryFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutListFragment"
+        android:name="com.example.V_Fit.WorkoutListFragment"
+        android:label="fragment_workout_list"
+        tools:layout="@layout/fragment_workout_list" >
+        <action
+            android:id="@+id/action_workoutListFragment_to_workoutDetailsFragment"
+            app:destination="@id/workoutDetailsFragment" />
+        <argument
+            android:name="userID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutDetailsFragment"
+        android:name="com.example.V_Fit.WorkoutDetailsFragment"
+        android:label="fragment_workout_details"
+        tools:layout="@layout/fragment_workout_details" >
+        <action
+            android:id="@+id/action_workoutDetailsFragment_to_workoutListFragment"
+            app:destination="@id/workoutListFragment" />
+        <argument
+            android:name="workoutmodel"
+            app:argType="com.example.V_Fit.WorkoutModel" />
+        <argument
+            android:name="userID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportMonthlyDurationFragment"
+        android:name="com.example.V_Fit.ReportMonthlyDurationFragment"
+        android:label="fragment_report_monthly_duration"
+        tools:layout="@layout/fragment_report_monthly_duration" >
+        <action
+            android:id="@+id/action_reportMonthlyDurationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="userID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.V_Fit.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
